@@ -86,7 +86,7 @@ class StatusChangeTileBuilder {
   }) {
     return (context, index) {
       if (index == 0) {
-        return null!;
+        return null;
       }
 
       return connectorBuilder?.call(index);
