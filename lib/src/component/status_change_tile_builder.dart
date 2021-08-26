@@ -81,25 +81,25 @@ class StatusChangeTileBuilder {
     return _builder(context, index);
   }
 
-  static IndexedWidgetBuilder? _createConnectedStartConnectorBuilder({
+  static IndexedWidgetBuilder _createConnectedStartConnectorBuilder({
     required Function(int index)? connectorBuilder,
   }) {
     return (context, index) {
       if (index == 0) {
-        return null;
+        return SizedBox();
       }
 
       return connectorBuilder?.call(index);
     };
   }
 
-  static IndexedWidgetBuilder? _createConnectedEndConnectorBuilder({
+  static IndexedWidgetBuilder _createConnectedEndConnectorBuilder({
     required Function(int index)? connectorBuilder,
     required int itemCount,
   }) {
     return (context, index) {
       if (itemCount != null && index == itemCount - 1) {
-        return null;
+        return SizedBox();
       }
 
       return connectorBuilder?.call(index + 1);
