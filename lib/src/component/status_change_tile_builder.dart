@@ -98,7 +98,7 @@ class StatusChangeTileBuilder {
     required int itemCount,
   }) {
     return (context, index) {
-      if (itemCount != null && index == itemCount - 1) {
+      if (index == itemCount - 1) {
         return SizedBox();
       }
 
